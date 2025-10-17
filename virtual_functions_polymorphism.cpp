@@ -1,21 +1,19 @@
 #include <iostream>
-#include <cmath> // Not strictly needed here, but good practice for geometric calculations
+#include <cmath> 
 
-// --- Base Class with Virtual Function ---
+
 class c_polygon {
 protected:
     double dim1, dim2; // Common dimensions: base/height or length/width
 
 public:
-    // Constructor to initialize dimensions
+    
     c_polygon(double d1 = 0, double d2 = 0) : dim1(d1), dim2(d2) {}
 
-    // 1. The Virtual Function
-    // The '= 0' makes this a Pure Virtual Function, turning c_polygon into an Abstract Class.
-    // Derived classes MUST implement this function.
+     Function, turning c_polygon into an Abstract Class.
+    
     virtual double area() const = 0;
 
-    // A non-virtual function to get dimensions
     void get_dimensions() {
         std::cout << "Enter first dimension: ";
         std::cin >> dim1;
@@ -23,7 +21,7 @@ public:
         std::cin >> dim2;
     }
     
-    // Virtual destructor is good practice for classes with virtual functions
+    
     virtual ~c_polygon() {}
 };
 
